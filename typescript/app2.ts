@@ -22,6 +22,20 @@ class Car {
     }
 }
 
-let carA = new Car("Hilux", 4);
-carA.speedUp();
-console.log(carA);
+class Concessionaire {
+    private address: string;
+    private carsList: any;
+
+    constructor(address: string, carsList: any){
+        this.address = address;
+        this.carsList = carsList;
+    }
+
+    public getAddress(): string{
+        return this.address;
+    }
+
+    public getCarsList(): any{
+        return this.carsList;
+    }
+}
