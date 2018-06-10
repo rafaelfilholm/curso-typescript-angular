@@ -39,3 +39,30 @@ class Concessionaire {
         return this.carsList;
     }
 }
+
+class Person {
+    private name: string;
+    private favoriteCar: string;
+    private car: any;
+
+    constructor(name: string, favoriteCar: string) {
+        this.name = name;
+        this.favoriteCar = favoriteCar;
+    }
+
+    public getName(): string {
+        return this.name;
+    }
+
+    public getFavoriteCar(): string{
+        return this.favoriteCar;
+    }
+
+    public buyCar(car: any): void{
+        this.car = car;
+    }
+
+    public getCar(): any{
+        return this.car;
+    }
+}
