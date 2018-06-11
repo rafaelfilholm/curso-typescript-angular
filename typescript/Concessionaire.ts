@@ -1,6 +1,7 @@
+import ConcessionaireInterface from './ConcessionaireInterface';
 import Car from './Car';
 
-export default class Concessionaire {
+export default class Concessionaire implements ConcessionaireInterface {
 	private address: string;
 	private carsList: Car[];
 
@@ -15,5 +16,9 @@ export default class Concessionaire {
 
 	public getCarsList(): Car[]{
 		return this.carsList;
+	}
+
+	public getWorkingHours(): string{
+		return "Open from 08:00 a.m. to 5:00 p.m. on week.";
 	}
 }
