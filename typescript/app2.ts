@@ -82,3 +82,14 @@ let concessionaire = new Concessionaire("Av. Santos Dumont", carsList);
 
 /* Create a new customer */
 let customer = new Person("Rafael", "Veloster");
+
+/* Check if favorite car is in concessionaire */ 
+concessionaire.getCarsList().map((car: Car)=>{
+    if(car['model'] == customer.getFavoriteCar()){
+        /* Buy car */
+        customer.buyCar(car);
+    }
+});
+
+/* Get customer's car */ 
+console.log(customer.getCar())
