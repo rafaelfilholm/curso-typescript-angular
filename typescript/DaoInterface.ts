@@ -1,4 +1,4 @@
-export default interface DaoInterface {
+export default interface DaoInterface<Type> {
 	/*
 	*	Table name
 	*/
@@ -6,35 +6,35 @@ export default interface DaoInterface {
 
 	/*
 	* Insert a new object
-	* @param {any} object
+	* @param {Type} object
 	* @returns {boolean}
 	*/
-	insert(object: any): boolean;
+	insert(object: Type): boolean;
 	
 	/*
 	* Update a object
-	* @param {any} object
+	* @param {Type} object
 	* @returns {boolean}
 	*/
-	update(object: any): boolean;
+	update(object: Type): boolean;
 
 	/*
 	* Delete a object
 	* @param {number} id
-	* @returns {any}
+	* @returns {Type}
 	*/
-	delete(id: number): any;
+	delete(id: number): Type;
 
 	/*
 	* Find a object
 	* @param {id} number
-	* @returns {any}
+	* @returns {Type}
 	*/
-	find(id: number): any;
+	find(id: number): Type;
 
 	/*
 	* Get all objects
-	* @returns {any[]}
+	* @returns {Type[]}
 	*/
-	all(): any[];
+	all(): Type[];
 }
