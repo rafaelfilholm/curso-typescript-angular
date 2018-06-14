@@ -21,4 +21,5 @@ export default class Concessionaire implements ConcessionaireInterface {
 	public getWorkingHours(): string{
 		return "Open from 08:00 a.m. to 5:00 p.m. on week.";
 	}
+	
 }
