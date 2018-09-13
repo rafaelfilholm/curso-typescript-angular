@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
 	public instruction: string = 'Traduza a seguinte frase:';
 	public answer: string = '';
 	public currentRound: number = 0;
+	public progress: number = 0;
 
 	constructor() { }
 
@@ -31,7 +32,10 @@ export class DashboardComponent implements OnInit {
 		if(currentPhrase.phrasePtBr == this.answer)
 		{
 			alert('A tradução está correta!');
-			this.currentRound = this.currentRound + 1;
+
+			this.currentRound += 1;
+			this.progress += (100 / this.phrases.length);
+
 		} else {
 			alert('A tradução está incorreta!');
 		}
