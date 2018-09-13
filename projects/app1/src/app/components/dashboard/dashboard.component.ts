@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Phrase } from '../shared/phrase.model';
+import { Phrase } from '../../shared/phrase.model';
 import { PHRASES } from './phrase-mock';
 
 @Component({

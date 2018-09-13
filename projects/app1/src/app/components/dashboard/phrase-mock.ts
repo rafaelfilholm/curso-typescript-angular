@@ -1,4 +1,4 @@
-import { Phrase } from '../shared/phrase.model';
+import { Phrase } from '../../shared/phrase.model';
 
 export const PHRASES: Phrase[] = [
 	{ phraseEng: 'I like to learn', phrasePtBr: 'Eu gosto de aprender' },
