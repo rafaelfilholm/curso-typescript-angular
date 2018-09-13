@@ -18,7 +18,7 @@
 				<p><strong> {{ phrases[currentRound].phraseEng }} </strong></p>
 
 				<div class="form-group">
-					<textarea class="form-control" rows="3" (input)="updateAnswer($event)" ></textarea>
+					<textarea class="form-control" rows="3" [(ngModel)]="answer" ></textarea>
 				</div>
 			</div>
 		</div>

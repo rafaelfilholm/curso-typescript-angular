@@ -21,10 +21,6 @@ export class DashboardComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	public updateAnswer(event: Event): void {
-		this.answer = (<HTMLInputElement>event.target).value;
-	}
-
 	public checkAnswer(): void {
 
 		let currentPhrase = this.phrases[this.currentRound];
@@ -32,12 +28,15 @@ export class DashboardComponent implements OnInit {
 		if(currentPhrase.phrasePtBr == this.answer)
 		{
 			alert('A tradução está correta!');
-
-			this.currentRound += 1;
-			this.progress += (100 / this.phrases.length);
-
+			this.updateRound();
 		} else {
 			alert('A tradução está incorreta!');
 		}
+	}
+
+	public updateRound(): void {
+		this.currentRound += 1;
+		this.progress += (100 / this.phrases.length);
+		this.answer = '';
 	}
 }
