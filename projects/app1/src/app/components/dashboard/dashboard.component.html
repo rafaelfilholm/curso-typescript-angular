@@ -15,17 +15,17 @@
 		<div class="row mt-3">
 			<div class="col">
 				<h6> {{ instruction }} </h6>
-				<p><strong> {{ phrases[0].phraseEng }} </strong></p>
+				<p><strong> {{ phrases[currentRound].phraseEng }} </strong></p>
 
 				<div class="form-group">
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" rows="3" (input)="updateAnswer($event)" ></textarea>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col">
-				<button class="btn btn-primary float-right">Verificar</button>
+				<button class="btn btn-primary float-right" (click)="checkAnswer()">Verificar</button>
 			</div>
 		</div>
 	</div>
